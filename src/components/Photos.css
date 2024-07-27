@@ -1,0 +1,24 @@
+.photos {
+    text-align: center;
+}
+
+select {
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.photo-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 150px;
+    text-align: left;
+    
+}
+
