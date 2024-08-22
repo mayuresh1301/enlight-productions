@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import RollingReviews from "./RollingReviews";
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
                 </div>
             </div>
 
+            <RollingReviews />
 
         </div>
 
