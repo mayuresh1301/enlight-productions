@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
-//import "./RollingReviews.css";
+import "./RollingReviews.css";
 
 const RollingReviews = () => {
     const [reviews, setReviews] = useState([]);
