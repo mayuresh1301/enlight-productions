@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import './Photos.css';
+import ReviewCards from "./ReviewCards";
 
 const Photos = () => {
     const [photos, setPhotos] = useState([]);
@@ -30,6 +31,7 @@ const Photos = () => {
                     <div key={photo.id} className="photo-item">
                         <img src={photo.thumbnailUrl} alt={photo.title} />
                         <p>{photo.title}</p>
+                        <ReviewCards photoId={photo.id} />
                     </div>
                 ))}
             </div>
