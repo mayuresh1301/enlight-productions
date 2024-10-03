@@ -20,17 +20,21 @@ const Photos = () => {
     return (
         <div className="photos">
 
-            <h1>Photos</h1>
-            <select onChange={(e) => setCategory(e.target.value)} value={category}>
-                <option value="">ALL</option>
-                <option value="events">Events</option>
-                <option value="weddings">Weddings</option>
+            <h1 className="photos-title">Photo Gallery</h1>
+            <select 
+                className="category-select"
+                onChange={(e) => setCategory(e.target.value)} 
+                value={category}
+            >
+                    <option value="">ALL</option>
+                    <option value="events">Events</option>
+                    <option value="weddings">Weddings</option>
             </select>
-            <div className="gallery">
+            <div className="photo-gallery">
                 {photos.map((photo) => (
                     <div key={photo.id} className="photo-item">
                         <img src={photo.thumbnailUrl} alt={photo.title} />
-                        <p>{photo.title}</p>
+                        <p className="photo-title">{photo.title}</p>
                         <ReviewCards photoId={photo.id} />
                     </div>
                 ))}
