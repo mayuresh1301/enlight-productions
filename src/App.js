@@ -7,20 +7,13 @@ import Services from "./components/Services";
 import InquiryForm from "./components/InquiryForm";
 //import Reviews from "./components/Reviews";
 import "./styles.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li><Link to = "/">Home</Link></li>
-            <li><Link to = "/photos">Photos</Link></li>
-            <li><Link to = "/videos">Videos</Link></li>
-            <li><Link to = "/services">Services</Link></li>
-            <li><Link to = "/inquiry">Inquiry</Link></li>
-          </ul>
-        </nav>
+      <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/photos" element={<Photos />} />
@@ -28,7 +21,7 @@ const App = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/inquiry" element={<InquiryForm />} />
         </Routes>
-      </div>
+        <Footer />
     </Router>
   );
 };

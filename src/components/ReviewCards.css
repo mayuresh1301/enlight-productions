@@ -1,0 +1,29 @@
+.review-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.review-card {
+    flex: 1 1 100%;
+    background-color: #333 !important;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-card p {
+    margin: 5px 0;
+    color: #f1f1f1 !important;
+}
+
+.review-card p strong {
+    color: #ff4081 !important;
+}
+
+/* Ensure the text is readable */
+.review-card p:not(:first-child) {
+    color: #f1f1f1 !important; /* Light text for better contrast */
+}
+

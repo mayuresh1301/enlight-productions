@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
-//import "./ReviewCards.css";
+import "./ReviewCards.css";
 
 const ReviewCards = ({ photoId }) => {
     const [reviews, setReviews] = useState([]);
@@ -24,8 +24,8 @@ const ReviewCards = ({ photoId }) => {
             {reviews.length > 0 ? (
                 reviews.map((review, index) => (
                     <div key={index} className="review-card">
-                        <p><strong>{review.author}</strong></p>
-                        <p>{review.text}</p>
+                        <p style={{ color: '#ff4081', fontWeight: 'bold' }}><strong>{review.author}</strong></p>
+                        <p style={{ color: '#f1f1f1' }}>{review.text}</p>
                         {review.rating && <p>Rating: {review.rating}</p>}
                     </div>
                 ))

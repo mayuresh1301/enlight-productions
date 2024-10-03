@@ -1,19 +1,63 @@
 .home {
     text-align: center;
+    background-image: url("C:\Everything\Github\enlight-productions\bg.jpg");  /* Placeholder for the background image */
+    /*background-color: #333;*/
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
 .featured-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 40px;
+    padding: 40px;
 }
 
 .featured-item {
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 150px;
+    background: rgba(255, 255, 255, 0.9); /* Transparent white background for items */
+    padding: 30px;
+    width: 240px;
     text-align: left;
-    
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Box shadow for items */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.featured-item:hover {
+    transform: scale(1.05); /* Slightly enlarge card on hover */
+}
+
+.featured-item img{
+    width: 100%;
+    border-radius: 12px; /* Rounded corners for images */
+}
+
+.featured-item h3 {
+    font-size: 1.4rem;
+    color: #333; /* Dark text color */
+    margin-bottom: 10px;
+}
+
+.featured-item p {
+    color: #666; /* Lighter text color */
+    font-size: 1rem;
+}
+
+/* For Mobile Responsiveness */
+@media (max-width: 768px) {
+    .featured-container {
+        flex-direction: column;
+        gap: 20px; /* Less gap between items on mobile */
+    }
+
+    .featured-item {
+        width: 90%; /* Full width on mobile devices */
+    }
 }

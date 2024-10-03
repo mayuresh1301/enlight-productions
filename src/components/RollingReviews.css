@@ -21,3 +21,13 @@
     }
     
 }
+
+.review p strong {
+    font-size: 1.2em;
+    color: #ff4081;
+}
+
+.review p {
+    font-size: 1.1em;
+    color: #333;
+}
