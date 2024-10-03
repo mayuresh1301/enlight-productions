@@ -7,6 +7,14 @@ const Videos = () => {
 
     useEffect(() => {
         fetchVideos();
+    }, []);
+
+    useEffect(() => {
+        if (category === "") {
+            fetchVideos();
+        } else {
+            filterVideosByCategory(category);
+        }
     }, [category]);
 
     const fetchVideos = async () => {
@@ -14,6 +22,13 @@ const Videos = () => {
         const data = await response.json(); 
         //console.log(data);
         setVideos(data.slice(0, 10));
+    };
+
+    const filterVideosByCategory = (selectedCategory) => {
+        const filteredVideos = videos.filter((video) => 
+            video.title.toLowerCase().includes(selectedCategory.toLowerCase())
+        );
+        setVideos(filteredVideos);
     };
 
     return (
