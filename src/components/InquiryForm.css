@@ -1,33 +1,38 @@
 .inquiry-form {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #f7f7f7;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.inquiry-form h1 {
+    padding: 40px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     text-align: center;
     margin-bottom: 20px;
 }
 
-.inquiry-form button {
+.inquiry-form h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.inquiry-form button, .login-btn {
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
+    margin-top: 20px;
     margin-bottom: 20px;
     border: none;
-    border-radius: 5px;
-    background-color: #007bff;
+    border-radius: 8px;
+    background-color: #4CAF50;
     color: white;
-    font-size: 16px;
+    font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .inquiry-form button:hover {
-    background-color: #0056b3;
+    background-color: #45a049;
 }
 
 .inquiry-form input,
@@ -41,29 +46,35 @@
     border-radius: 5px;
     font-size: 16px;
     box-sizing: border-box;
+    text-align: left;
 }
 
 .inquiry-form fieldset{
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 15px;
+    margin-bottom: 20px;
 }
 
 .inquiry-form legend {
     font-size: 18px;
+    color: #4CAF50;
     margin-bottom: 10px;
 }
 
 .inquiry-form label {
-    display: block;
-    margin-bottom: 5px;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 10px;
 }
+
 
 .inquiry-form input[type="checkbox"] {
     width: auto;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
+/*
 .inquiry-form button[type="submit"] {
     background-color: #4CAF50;
 }
@@ -78,5 +89,12 @@
     color: green;
     text-align: center;
 }
-  
+*/
+
+.success-message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: green;
+    text-align: center;
+}
   
