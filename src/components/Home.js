@@ -18,6 +18,7 @@ import PhotoBoothImg from "../assets/photobooth.jpg";
 import AlbumImg from "../assets/album.jpg";
 import WeddingImg from "../assets/weddings.jpg";
 import NewBornImg from "../assets/newborn.jpg";
+import backgroundImg from "../assets/bg.jpg";
 
 const servicesData = [
     {
@@ -120,7 +121,9 @@ const Home = () => {
 
     }, []);
     return (
-        <div className="home">
+        <div className="home"
+            style={{backgroundImage: `url(${backgroundImg})`}}
+        >
             <h1>Featured Photos and Videos</h1>
             <div className="featured-container">
                 <div className="featured-item">

@@ -1,6 +1,6 @@
 .home {
     text-align: center;
-    background-image: url("C:\Everything\Github\enlight-productions\bg.jpg");  /* Placeholder for the background image */
+    background-image: url("");  /* Placeholder for the background image */
     /*background-color: #333;*/
     background-size: cover;
     background-position: center;
@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #f50057;
 }
 
 .featured-container {
@@ -63,14 +63,17 @@
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s ease-out, transform 1s ease-out;
+    justify-content: center;
 }
 
 
 .service-item.left .service-content {
     order: 1;
     /* text-align: right; */
-    align-items: flex-end;
-    padding-right: 40px;
+    /*align-items: flex-end;*/
+    text-align: center;
+    /*padding-right: 40px;*/
+    padding: 0 20px;
 }
 
 .service-item.left .service-image {
@@ -80,8 +83,10 @@
 .service-item.right .service-content {
     order: 2;
     /* text-align: left; */
-    align-items: flex-start;
-    padding-left: 40px;
+    /*align-items: flex-start;*/
+    text-align: center;
+    /*padding-left: 40px;*/
+    padding: 0 20px;
 }
 
 .service-item.right .service-image {
@@ -93,14 +98,21 @@
     /* New code */
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    /*align-items: flex-end;*/
+    align-items: center;
+    text-align: center;
+    /* New new code */
+    justify-content: center;
+    padding: 0 20px;
 }
 
+/*
 .service-content .icon-wrapper {
     font-size: 3rem;
     color: #f50057;
     margin-bottom: 20px;
 }
+*/
 
 .service-content h3 {
     font-size: 2rem;
@@ -115,18 +127,21 @@
 
 .service-details {
     margin-top: 20px;
+    text-align: center;
 }
 
 .service-details h4 {
     font-size: 1.2rem;
     color: #333;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .service-details p {
     font-size: 1rem;
     color: #555;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .service-details ul {
@@ -138,6 +153,7 @@
     font-size: 1rem;
     color: #555;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .service-image {
@@ -153,15 +169,16 @@
 
 
 /* Aligning the icon and the title */
+/*
 .icon-title-wrapper {
     display: flex;
     align-items: center;
-    /* justify-content: flex-end; */
+    
     width: 100%;
 }
 
 .service-item.right .icon-title-wrapper {
-    justify-content: flex-start; /* Align to the left for right items */
+    justify-content: flex-start; 
 }
 
 .icon-wrapper {
@@ -169,15 +186,15 @@
 }
 
 .service-item.right .icon-wrapper {
-    margin-right: 0; /* Remove margin for right items */
-    margin-left: 10px; /* Add margin to the left for right items */
+    margin-right: 0; 
+    margin-left: 10px; 
 }
 
-/* New code */
+
 .service-content h3,
 .service-content p,
 .service-content .service-details {
-    width: 100%; /* Full width for text content */
+    width: 100%; 
 }
 
 .icon-wrapper {
@@ -188,8 +205,7 @@
     margin-left: 10px;
     margin-right: 0;
 }
-
-
+*/
 /* For Mobile Responsiveness */
 @media (max-width: 768px) {
     .featured-container {
