@@ -4,6 +4,11 @@ import { collection, addDoc } from "firebase/firestore";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import "./InquiryForm.css";
 
+// Leafelet imports
+import MapPicker from "./MapPicker";
+
+
+
 const InquiryForm = () => {
     const [user, setUser] = useState(null);
     const [formData, setFormData] = useState({
@@ -16,6 +21,8 @@ const InquiryForm = () => {
         venue: "",
         additionalDetails: "",
     });
+
+    const [location, setLocation] = useState(null);
 
     const [submitted, setSubmitted] = useState(false);
 
@@ -62,6 +69,12 @@ const InquiryForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Ensure location is set
+        if (!location) {
+            alert('Please select a location on the map');
+            return;
+        };
         try{
             await addDoc(collection(db, 'inquiries'), {
                 firstName: formData.firstName,
@@ -71,6 +84,7 @@ const InquiryForm = () => {
                 services: formData.services,
                 guests: formData.guests,
                 venue: formData.venue,
+                location: location,
                 additionalDetails: formData.additionalDetails,
                 createdAt: new Date(),
             });
@@ -86,12 +100,15 @@ const InquiryForm = () => {
                 venue: "",
                 additionalDetails: "",
             });
+            setLocation(null);
         } catch (error) {
             console.error('Error submitting inquiry:', error);
             alert('An error occurred. Please try again.');
         };
     };
 
+    
+    
     return (
         <div className="inquiry-form">
             <h1>Inquiry Form</h1>
@@ -211,6 +228,16 @@ const InquiryForm = () => {
                     required
                 />
 
+                <label>Select event location:</label>
+                <MapPicker 
+                    onLocationSelect={setLocation}
+                    defaultPosition={{lat: 40.73061, lng: -73.935242}}
+                />
+                {location && (
+                    <div>
+                        <p>Location selected: {location.lat}, {location.lng}</p>
+                    </div>
+                )}
                 <textarea 
                     name="additionalDetails"
                     placeholder="Additional Details"
