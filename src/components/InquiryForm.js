@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { db } from "../firebase";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, GeoPoint } from "firebase/firestore";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import "./InquiryForm.css";
 
@@ -84,7 +84,7 @@ const InquiryForm = () => {
                 services: formData.services,
                 guests: formData.guests,
                 venue: formData.venue,
-                location: location,
+                location: new GeoPoint(location.lat, location.lng),
                 additionalDetails: formData.additionalDetails,
                 createdAt: new Date(),
             });
